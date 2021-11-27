@@ -1,0 +1,65 @@
+<html>
+   <head>
+   </head>
+   <body
+   style="background: linear-gradient(to bottom, #282626 0%, #0c0c0c 100%)"></style>
+   </body>
+
+           <style>
+           body {
+                 color: white;
+                 }
+           </style>
+   </head>
+      <body>
+      <style>
+
+      input[type=button], input[type=submit], input[type=reset]
+      {
+      background-color: #A9A9A9;
+      border: none;
+      color: grey;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      }
+   </style>
+   <body>
+      <div style="text-align: center;">
+         <h1 style="background-color:black;">Automated Minutes of Meeting</h1>
+      </div>
+      <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+
+         <div style="text-align: center;">
+             <input type="submit" value="Start Recording" name="action1" style="color:black"/>
+         </div>
+         <div style="text-align: center;">
+             <input type="submit" value="Pause Recording" name="action2" style="color:black"/>
+         </div>
+         <div style="text-align: center;">
+             <input type="submit" value="End Recording" name="action3" style="color:black"/>
+         </div>
+         <span style="font-size: 144%; ">
+            <div style="text-align: center;">
+               <p style="color:white;"> This will result into a summary of your meeting</p>
+            </div>
+         </span>
+         <br/>
+         <div style="text-align: center;">
+             <div>
+                <label for="file-upload">
+                    <input type="file" id="file-upload" name="file">
+                    <i class="fa fa-upload custom-file-upload buttonHover" aria-hidden="true"> Choose File</i>
+                </label>
+            </div>
+             <input style="color:black" type="submit" value="Upload your Recording" />
+         </div>
+          <div style="text-align: center;"><strong style="color:white;"> Summary of meeting is: </strong></div>
+          <div style="text-align: center;"><input name="Results" placeholder="Results will be shown here"></div>
+          <br/>
+          <div style="text-align: center;"><strong style="color:white;"> Predicted Sentiment of this meeting is: </strong></div>
+          <div style="text-align: center"><input name="Results" placeholder="Sentiments will be shown here"></div>
+      </form>
+   </body>
+</html>
